@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float moveSpeed;
+
     public float accelerateSpeed = 1f;
     public float maximumSpeed = 5f;
     private Vector3 input;
