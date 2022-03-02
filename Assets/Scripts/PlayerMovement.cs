@@ -12,6 +12,11 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody rb;
 
+    private void Start()
+    {
+        
+    }
+
     void Update()
     {
         input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
@@ -19,7 +24,9 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.magnitude < maximumSpeed)
         {
             rb.AddForce(input * accelerateSpeed, ForceMode.Acceleration);
-            print(rb.velocity);
+            //print(rb.velocity);
         }
     }
+
+
 }
