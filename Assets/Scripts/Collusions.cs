@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Collusions : MonoBehaviour
 {
@@ -14,11 +15,28 @@ public class Collusions : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.transform.tag == "Enemy")
+        if (other.transform.tag == "Enemy"||other.transform.tag =="Void")
         {
-            Instantiate(deathParticles, transform.position, Quaternion.identity);//Quaternion.identity=not rotation
-            //Destroy(gameObject);
-            transform.position = spawn;
+            Die();
         }
+
+        if (other.transform.tag == "Goal")
+        {
+            GameManager.CompleteLevel();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Goal")
+        {
+            GameManager.CompleteLevel();
+        }
+    }
+
+    public void Die()
+    {
+        Instantiate(deathParticles, transform.position, Quaternion.Euler(270,0,0));
+        transform.position = spawn;
     }
 }

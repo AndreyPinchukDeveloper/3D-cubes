@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.magnitude < maximumSpeed)
         {
             rb.AddForce(input * accelerateSpeed, ForceMode.Acceleration);
-            //print(rb.velocity);
         }
     }
 
