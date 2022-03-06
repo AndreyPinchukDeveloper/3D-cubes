@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public static void CompleteLevel()
     {
         currentLevel ++;
+        print("Congratulations ! Try to complite next level !");
         SceneManager.LoadScene(currentLevel);
     }
 }
