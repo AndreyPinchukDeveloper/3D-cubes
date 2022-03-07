@@ -26,6 +26,4 @@ public class PlayerMovement : MonoBehaviour
             rb.AddRelativeForce(input * accelerateSpeed, ForceMode.Acceleration);
         }
     }
-
-
 }

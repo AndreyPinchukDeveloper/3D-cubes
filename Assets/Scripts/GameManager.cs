@@ -10,7 +10,12 @@ public class GameManager : MonoBehaviour
 
     public static int currentLevel = 0;
     public static int unlockedLevel;
-     
+
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);//that method do not destroy GameMasnager at next scene
+    }
+
     public static void CompleteLevel()
     {
         currentLevel ++;
