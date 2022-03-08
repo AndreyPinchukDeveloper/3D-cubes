@@ -28,10 +28,19 @@ public class Collusions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Goal")
+        switch (other.transform.tag)
+        {
+            case "Goal":
+                GameManager.CompleteLevel();
+                break;
+            case "Enemy":
+                Die();
+                break;
+        }
+        /*if (other.transform.tag == "Goal"||other.transform.tag == "Enemy")
         {
             GameManager.CompleteLevel();
-        }
+        }*/
     }
 
     public void Die()
