@@ -290,6 +290,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06878d8f74d6c9d43a87d26dc66fe5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerRect:
+    serializedVersion: 2
+    x: 25
+    y: 25
+    width: 200
+    height: 200
+  warningColorTimer: {r: 0.8396226, g: 0.019802418, b: 0.019802418, a: 0}
+  normalColorTimer: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 0}
+  skin: {fileID: 11400000, guid: 2a3484cee6059b24cb7e68c1396b5514, type: 2}
 --- !u!4 &597406591
 Transform:
   m_ObjectHideFlags: 0
