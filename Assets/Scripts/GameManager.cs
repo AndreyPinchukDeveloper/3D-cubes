@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static int currentScore;
-    public static int highScore;
+    public int currentScore;
+    public int highScore;
 
-    public static int currentLevel = 50;
-    public static int unlockedLevel;
+    public int currentLevel = 50;
+    public int unlockedLevel;
 
     public Rect timerRect;
 
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static void CompleteLevel()
+    public void CompleteLevel()
     {
         currentLevel ++;
         print("Congratulations ! Try to complite next level !");

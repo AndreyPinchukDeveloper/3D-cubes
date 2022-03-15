@@ -12,7 +12,8 @@ public class ManageMenu : MonoBehaviour
 
         if (GUI.Button(new Rect(10, 70, 300, 40), "Start"))
         {
-            GameManager.CompleteLevel();
+            Collusions collusions = new Collusions();
+            collusions.manager.CompleteLevel();
         }
 
         if (GUI.Button(new Rect(10, 120, 300, 45), "Quit"))

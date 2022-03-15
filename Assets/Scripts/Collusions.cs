@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Collusions : MonoBehaviour
 {
+    public GameManager manager;
     private Vector3 spawn;
     public GameObject deathParticles;
 
     void Start()
     {
         spawn = transform.position;
+        manager = manager.GetComponent<GameManager>();
     }
 
     private void OnCollisionEnter(Collision other)
@@ -22,7 +24,7 @@ public class Collusions : MonoBehaviour
 
         if (other.transform.tag == "Goal")
         {
-            GameManager.CompleteLevel();
+            manager.CompleteLevel();
         }
     }
 
@@ -31,7 +33,7 @@ public class Collusions : MonoBehaviour
         switch (other.transform.tag)
         {
             case "Goal":
-                GameManager.CompleteLevel();
+                manager.CompleteLevel();
                 break;
             case "Enemy":
                 Die();
