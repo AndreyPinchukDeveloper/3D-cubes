@@ -290,6 +290,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06878d8f74d6c9d43a87d26dc66fe5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentScore: 0
+  highScore: 0
+  currentLevel: 50
+  unlockedLevel: 0
   timerRect:
     serializedVersion: 2
     x: 25
@@ -548,6 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad11e3bcce06c9418228f79fdf76828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 597406590}
   deathParticles: {fileID: 2503752905201411331, guid: 90a446de210498e4ab94548085f633b6, type: 3}
 --- !u!1 &806177740
 GameObject:

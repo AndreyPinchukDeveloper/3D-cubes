@@ -5,6 +5,7 @@ using UnityEngine;
 public class ManageMenu : MonoBehaviour
 {
     public GUISkin skin;
+    public GameManager manager;
     private void OnGUI()
     {
         GUI.skin = skin;
@@ -13,7 +14,7 @@ public class ManageMenu : MonoBehaviour
         if (GUI.Button(new Rect(10, 70, 300, 40), "Start"))
         {
             Collusions collusions = new Collusions();
-            collusions.manager.CompleteLevel();
+            manager.CompleteLevel();
         }
 
         if (GUI.Button(new Rect(10, 120, 300, 45), "Quit"))
